@@ -8,7 +8,7 @@ export type SelectOption = {
 }
 
 export type SearchDef = {
-  dataType?: "string" | "number" | "date" | "calendar" | "select",
+  dataType?: "string" | "number" | "date" | "dateTime" | "select",
   id: string,
   placeholder?: string
   options?: SelectOption[]

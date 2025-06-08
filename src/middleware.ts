@@ -6,14 +6,14 @@ export default function middleware(req: NextRequest) {
   const sessionCookie = getSessionCookie(req)
   const res = NextResponse.next()
   const isLoggedIn = !!sessionCookie
-  const pathname = nextUrl.pathname
+  const pathname = nextUrl.pathname                                 
   if (!isLoggedIn) {
     if (pathname.startsWith('/auth')) {
       return res
     }
   } else {
     if (pathname.startsWith('/auth')) {
-      return NextResponse.redirect(new URL('/profile', req.url))
+      return NextResponse.redirect(new URL('/profile', req.url))                                                
     }
     return res
   }
